@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <script src="js/contablito.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Contablito 3.0</title>
+
+</head>
+
+<body>
+    <nav class="site-header sticky-top py-1 bg-dark w-100">
+        <div class="container d-flex flex-md-row justify-content-between align-items-center">
+            <a class="py-2 d-none d-md-inline-block text-white" href="">Productos</a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="contablito.html">Contablito</a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="transacciones.html">Transacciones</a>
+        </div>
+    </nav>
+    <main class="d-flex w-100 mt-4">
+        <div class="position-relative">
+            <form class="col d-flex justify-content-center flex-column">
+                <label for=" descripcion">Descripcion: <input type="text" class="form-control" name="descripcion"
+                        id="descripcion" autocomplete="off" placeholder="1kg de papa..." required></label>
+                <label class="mt-2">Transacción:</label>
+                <label for="compra" class="btn-light"><input type="radio" name="transaccion" id="compra" value="compra"
+                        checked autocomplete="off">
+                    Compra</label>
+                <label for="venta" class="btn-light"><input type="radio" name="transaccion" id="venta" value="venta"
+                        autocomplete="off">
+                    Venta</label>
+                <label class="mt-2">IVA:</label>
+                <label for="basico" class="btn-light"><input type="radio" name="iva" id="basico" value="basico"
+                        autocomplete="off" checked>
+                    Basico</label>
+                <label for="minimo" class="btn-light"><input type="radio" name="iva" id="minimo" value="minimo"
+                        autocomplete="off">
+                    Minimo</label>
+                <label for="exento" class="btn-light"><input type="radio" name="iva" id="exento" value="exento"
+                        autocomplete="off">
+                    Exento</label>
+                <label class="mt-2">SubTotal $:</label>
+                <input type="number" class="form-control" name="precio" placeholder="Costo..." min="1"
+                    autocomplete="off" required>
+                <button class="btn btn-primary mt-2">Ingresar</button>
+            </form>
+        </div>
+        <div class="col-10">
+            <table class="table table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Descripcion</th>
+                        <th>Tipo</th>
+                        <th>Subtotal</th>
+                        <th>IVA</th>
+                        <th>Total</th>
+                        <th>Fecha</th>
+                    </tr>
+                <tbody></tbody>
+                </thead>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

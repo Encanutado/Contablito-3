@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <script src="js/transacciones.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Contablito 3.0</title>
+</head>
+
+<body>
+    <nav class="site-header sticky-top py-1 bg-dark w-100">
+        <div class="container d-flex flex-md-row justify-content-between align-items-center">
+            <a class="py-2 d-none d-md-inline-block text-white" href="">Productos</a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="contablito.html">Contablito</a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="transacciones.html">Transacciones</a>
+        </div>
+    </nav>
+    <main class="col mt-4">
+        <section class="container d-flex flex-md-row justify-content-between align-items-center mb-4">
+            <div class="col-md-6 pl-0">
+                <input class="form-control" type="search" placeholder="Buscar..." autocomplete="off">
+            </div>
+            <div class="col-md-6 row justify-content-end ">
+                <div class="btn-group btn-group-toggle">
+                    <label class="btn btn-light">
+                        <input type="radio" name="options" value="compra" autocomplete="off">Compras</input>
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" name="options" value="venta" autocomplete="off">Ventas</input>
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" name="options" value="all" autocomplete="off">All</input>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section class="container d-flex flex-md-row justify-content-between align-items-center mb-4">
+            <table class=" table table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">IVA</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                <tbody></tbody>
+                </thead>
+            </table>
+        </section>
+    </main>
+    <style>
+        table,
+        td,
+        tr {
+            vertical-align: middle;
+        }
+
+        tr td:first-child {
+            max-width: 50px;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</body>
+
+</html>
