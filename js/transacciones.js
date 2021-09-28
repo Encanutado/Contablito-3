@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("input[type='radio']").forEach(e => e.addEventListener("change", filtrar))
         showTransaccion(buscar());
     } catch (error) {
-        document.body.innerHTML += `<p class="alert alert-danger text-center">La lista se encuentra vacia, por favor ingrese algun valor <a href="contablito.html">aquí</a> y vuelva a intentarlo </p>`
+        document.body.innerHTML += `<p class="alert alert-danger text-center">La lista se encuentra vacia, por favor ingrese algun valor <a href="index.html">aquí</a> y vuelva a intentarlo </p>`
     }
 })
 
