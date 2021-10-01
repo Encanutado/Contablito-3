@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         radioBtn = document.querySelectorAll("input[type='radio']")
         document.querySelectorAll("input[type='radio']").forEach(e => e.addEventListener("change", filtrar))
         showTransaccion(buscar());
+        balance();
     } catch (error) {
+        console.log(error)
         document.body.innerHTML += `<p class="alert alert-danger text-center">La lista se encuentra vacia, por favor ingrese algun valor <a href="index.html">aquí</a> y vuelva a intentarlo </p>`
     }
 })
@@ -22,7 +24,7 @@ let filtrar = () => {
 //Gestiona la búsqueda de coincidencias entre lo ingresado por el usuario y las propiedades de cada transacción
 let buscar = () => {
     let search = document.querySelector("input[type='search']").value.toLowerCase();
-    let buscar = listaTrasaccion.filter(t => t.descripcion.toLowerCase().includes(search) || t.iva.toLowerCase().includes(search) || t.transaccion.toLowerCase().includes(search));
+    let buscar = listaTrasaccion.filter(t => t.descripcion.toLowerCase().includes(search) || t.iva.toLowerCase().includes(search) || t.transaccion.toLowerCase().includes(search) || t.fecha.includes(search));
     return buscar
 }
 
@@ -30,6 +32,12 @@ let buscar = () => {
 let seleccionado = () => {
     radioBtn.forEach(e => e.parentNode.classList.contains("active") ? e.parentNode.classList.replace("active", "inactive") : null)
     radioBtn.forEach(e => e.checked ? e.parentNode.classList.add("active") : null)
+}
+
+let balance = () => {
+    balance = 0;
+    listaTrasaccion.forEach(e => e.transaccion === "compra" ? balance += e.precio * ivas[e.iva] : balance -= e.precio * ivas[e.iva])
+    document.querySelector(".total").innerHTML += `$ ${balance.toFixed(2)}`;
 }
 
 //----------------------------------------------------------------

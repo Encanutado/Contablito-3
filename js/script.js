@@ -29,13 +29,70 @@ let showTransaccion = (arr = listaTrasaccion) => {
   }
 }
 
-//Crea la fecha actual al momento de ser llamada
-let fecha = () => {
-  let date = new Date();
-  let fecha = {
-    anio: date.getFullYear(),
-    mes: date.getMonth() < 9 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1,
-    dia: date.getDate < 10 ? "0" + date.getDate() : date.getDate()
+
+/*
+//borrar transaccion seleccionada
+let borrar = (id) => {
+  for (let i; i < listaTrasaccion.length; i++) {
+    return listaTrasaccion[i].id === listaTrasaccion[i][id] ? listaTrasaccion.splice(i, 1) : null;
   }
-  return `${fecha.anio}-${fecha.mes}-${fecha.dia}`
 }
+
+//------------------------------------------| EN CONSTRUCCION |-------------------------------------------------
+//classe que se va a utilizar con el metodo addTransaccion para crear un nuevo objeto con las propiedades
+
+class Transaction {
+  constructor(des, tran, iva, subTotal) {
+    this.fecha = fecha();
+    this.descripcion = des;
+    this.transaccion = tran;
+    this.subTotal = subTotal;
+    this.iva = iva;
+  }
+}
+class Producto {
+  constructor(id, name, min, cost) {
+    this.id = id;
+    this.name = name;
+    this.stockMin = min;
+    this.stock;
+    this.precio = cost;
+  }
+  setStock(cant) {
+    this.stock = cant;
+  }
+  getStock() {
+    return this.stock;
+  }
+}
+let transacciones = {
+  lista: [],
+  balance = 0,
+  addTransaccion: function (tran) {
+    try {
+      tran.transaccion === "compra" ? this.balance += tran : this.balance -= tran;
+      this.listaTrasacciones.push(tran);
+      return true
+    } catch (error) {
+      return console.log(error)
+    }
+  },
+  getBalance: function () {
+    return this.balance;
+  },
+  getLista: function () {
+    return this.lista;
+  }
+}
+
+listaTrasaccion = transacciones.getLista();
+
+
+// //hace match con cualquir numero tanto decimal como entero que este antes de "kg"
+
+
+let RegExpPeso = /\d+kg|\d+.\d+kg|\d+\skg|\d+.\d+\skg/ig
+
+// //hace match con cualquier palabra que este dentro de la lista
+let RegExpProducto = /[arroz-papa-zanahoria-tomate-lechuga]/ig
+*/
