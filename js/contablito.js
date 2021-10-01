@@ -4,7 +4,7 @@
  let id = 0;
 
  document.addEventListener("DOMContentLoaded", (e) => {
-     transaccion = document.querySelectorAll("input[name='products']");
+     transaccion = document.querySelectorAll("input[name='transaccion']");
      iva = document.querySelectorAll("input[name='iva']");
      document.querySelector("form").addEventListener("submit", addTransaccion)
  });
