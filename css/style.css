@@ -1,0 +1,24 @@
+table,
+td,
+tr {
+  vertical-align: middle;
+}
+
+tr td:first-child {
+  max-width: 50px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.total {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+}
+
+.btn,
+.btn-light {
+  cursor: pointer;
+}
